@@ -1,0 +1,154 @@
+/* generic Styling */
+body{
+  background-color: rgb(138, 215, 238);
+  height:100vh;
+  margin:0;
+}
+.flexVert{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.flexHori{
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+  line-height:2rem;
+}
+
+/* The Outside Container */
+#wrapper{
+  height: 100%;
+}
+
+/* First Block Div*/
+#firstBlock{
+  height:40vh;
+  width:80%;
+  background:linear-gradient(to right ,pink,red,violet);
+  border-radius : 20px;
+}
+#firstInp input{
+  display:block;
+  height:100%;
+  width:40%;
+  box-sizing: border-box;
+}
+#imgCont{
+  width:100px;
+  height:100px;
+}
+#imgCont img{
+  display:block;
+  width:100%;
+  height:100%;
+}
+#title{
+  color:white;
+}
+#firstInp h2{
+  /* border:2px solid grey; */
+  width:100px;
+  text-align:center;
+  background-color:antiquewhite;
+  border-radius:20px;
+
+}
+#firstInp button{
+  border:none;
+  border-radius:20px;
+  box-sizing:border-box;
+}
+#firstInp button:hover{
+  border:1px solid grey;
+}
+/* SecBlock Div*/
+#secBlock{
+  height:200px;
+  width:70%;
+  background-color:rgb(54, 51, 51);
+  border-radius:20px;
+}
+input{
+  font-size:35px;
+  text-align:center;
+}
+
+#secBlock > div{
+  width:20% ;
+}
+
+
+.marker{                    /* the styles on Minute and Secs Heading */              
+ color:white; 
+ font-size:20px;
+}
+                               /* Styles for the card where time is displayed*/
+.box{
+  width:80px;
+  height:80px;
+  position:relative;
+  overflow:hidden;
+}
+p{
+  text-align:center;
+  width:100%;
+  height:100%;
+  margin:0px;
+  background-color:white;
+  box-sizing: border-box;
+  border-top:5px solid black;
+  font-size:30px;
+  font-weight:700;
+  padding-top:15px;
+}
+p.next{
+  top:100px;
+}
+
+/* This adds the style of Upward movement to nextCard that is currently hidden due to overflow prop  */
+p.animated{
+  transition: all 0.5s ;
+  top:0px;
+  position:absolute;
+}
+
+/* Media Queries */
+@media screen and (max-width:420px){
+  body{
+    height:100vh;
+  }
+  .flexHori{                  /* here basically changed flex oriemtation to Vertical*/
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+  }
+
+  #firstBlock{
+    height:auto;    
+  }
+  
+  button{
+    height:40px;
+  }
+
+  #secBlock{
+    height:auto;
+  }
+  #secBlock .box{
+    height:60px;
+  }
+  button{
+    margin-bottom: 4px;
+  }
+  button h2{
+    margin:0;
+  }
+ 
+  #secBlock .flexVert{
+    margin-bottom:6px;  
+  } 
+
+}
